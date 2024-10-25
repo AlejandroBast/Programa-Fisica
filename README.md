@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Explicación del Proyecto de Simulación de Misiles
 
 <p align="justify">
