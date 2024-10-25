@@ -87,7 +87,7 @@ def calcular():
 
         # Graficar la trayectoria
         plt.figure()
-        plt.plot(x, y)
+        plt.plot(x, y, Label='Enemy', color='red')
         plt.xlabel('Distancia (m)')
         plt.ylabel('Altura (m)')
         plt.title('Trayectoria del proyectil')

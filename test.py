@@ -17,10 +17,10 @@ class MisilEnemigo:
         y0 = 0
         x0 = 0
 
-        self.hMax = y0 + (self.v0**2 * (np.sin(self.angulo)**2)) * 0.5 / 9.8  # altura maxima
-        self.dMax = (self.v0**2 * np.sin(2 * self.angulo)) / self.g  # distancia maxima
-        self.tiempoVuelo = 2 * (self.v0 * np.sin(self.angulo)) / self.g  # tiempo de vuelo
-        print('la distancia maxima es de: ', self.dMax)
+        self.hMax = y0 + (self.v0**2 * (np.sin(self.angulo)**2)) * 0.5 / 9.8  
+        self.dMax = (self.v0**2 * np.sin(2 * self.angulo)) / self.g 
+        self.tiempoVuelo = 2 * (self.v0 * np.sin(self.angulo)) / self.g  
+        print('la distancia macima es de: ', self.dMax)
         print('la altura maxima es de: ', self.hMax)
         print('el tiempo de vuelo es de: ', self.tiempoVuelo)
 
@@ -131,7 +131,7 @@ misil_enemigo = MisilEnemigo(4000, 45)
 misil_enemigo.localizarMisilEnemigo()
 
 # Altura de intercepción
-hIntercepcion = 400000  # Altura de 200 km
+hIntercepcion = 100000  
 
 # Calcular el tiempo de intercepción
 tiemposValidos = misil_enemigo.interceptarEnemigo(hIntercepcion)
@@ -143,7 +143,7 @@ if tiemposValidos:
     x_intercepcion, _ = misil_enemigo.obtenerCoordenadas(tiempoSeleccionado)
 
     # Configurar el misil interceptador con una posición inicial de 10,000 metros
-    posicion_inicial_interceptador = 100000  # El interceptador empieza a 10,000 metros
+    posicion_inicial_interceptador = 10000  # El interceptador empieza a 10,000 metros
 
     misil_interceptor = MisilInterceptador(x_intercepcion, hIntercepcion, tiempoSeleccionado, posicion_inicial_interceptador)
     misil_interceptor.calcularParametros()
